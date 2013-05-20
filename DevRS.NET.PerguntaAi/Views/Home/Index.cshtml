@@ -9,13 +9,19 @@
             </hgroup>
             <p>
                 <input type="text" name="pergunta" placeholder="Qual tua dúvida?" data-bind="value: textoPergunta"/>
-                <button name="enviar_pergunta" data-bind="enable: deveExibirBotao, click: perguntar">Perguntar!</button>
+                <button name="enviar_pergunta" data-bind="enable: deveExibirBotao, click: perguntar">Dale!</button>
+            </p>
+            <p>
+                <label data-bind="visible: deveExibirErro, text: textoErro"></label>
             </p>
         </div>
     </section>
 }
-<section name="perguntas" data-bind="foreach: perguntas">
-    <label data-bind="text: $data"></label>
+
+<section name="perguntas">
+    <ol data-bind="foreach: perguntas">
+        <li><strong data-bind="text: $data"></strong></li>
+    </ol>
 </section>
 
 
