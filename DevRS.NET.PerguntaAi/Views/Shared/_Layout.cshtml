@@ -13,17 +13,14 @@
         <header>
             <div class="content-wrapper">
                 <div class="float-left">
-                    <p class="site-title">@Html.ActionLink("your logo here", "Index", "Home")</p>
+                    <p class="site-title">
+                        <img src="~/Images/devrs.png" />
+                    </p>
                 </div>
-                <div class="float-right">
-                    <section id="login">
-                        @Html.Partial("_LoginPartial")
-                    </section>
+                <div class="float-right">                    
                     <nav>
                         <ul id="menu">
                             <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                            <li>@Html.ActionLink("About", "About", "Home")</li>
-                            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                         </ul>
                     </nav>
                 </div>
@@ -38,7 +35,7 @@
         <footer>
             <div class="content-wrapper">
                 <div class="float-left">
-                    <p>&copy; @DateTime.Now.Year - DevRS.NET</p>
+                    <p>&copy; @DateTime.Now.Year - <a href="http://devrs.net/" target="_blank">DevRS.NET</a></p>
                 </div>
             </div>
         </footer>
