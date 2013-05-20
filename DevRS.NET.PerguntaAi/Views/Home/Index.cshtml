@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Pergunta Aí!";
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title</h1>
+            </hgroup>
+            <p>
+                <input type="text" name="pergunta" placeholder="Qual tua dúvida?" data-bind="value: textoPergunta"/>
+                <button name="enviar_pergunta" data-bind="visible: deveExibirBotao, enable: deveExibirBotao, click: perguntar">Perguntar!</button>
+            </p>
+        </div>
+    </section>
+}
+<section name="perguntas" data-bind="foreach: perguntas">
+    <label data-bind="text: $data"></label>
+</section>
+
+
+@section scripts {
+    <script type="text/javascript">
+        ko.applyBindings(index.viewModel);
+    </script>
+}
