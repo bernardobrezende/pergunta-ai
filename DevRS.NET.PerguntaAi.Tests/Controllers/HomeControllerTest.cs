@@ -1,5 +1,6 @@
 ﻿using DevRS.NET.PerguntaAi.Controllers;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SharpTestsEx;
 using System.Web.Mvc;
 
 namespace DevRS.NET.PerguntaAi.Tests.Controllers
@@ -17,7 +18,7 @@ namespace DevRS.NET.PerguntaAi.Tests.Controllers
             ViewResult result = controller.Index() as ViewResult;
 
             // Assert
-            Assert.IsNotNull(result);
+            result.Should().Not.Be.Null();
         }       
     }
 }
